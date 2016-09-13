@@ -7,6 +7,7 @@ Description: This plugin allows theme authors to include single post templates, 
 
 Author: Nathan Rice
 Author URI: http://www.nathanrice.net/
+Text Domain: single-post-template
 
 Version: 1.4.4
 
@@ -84,7 +85,7 @@ class Single_Post_Template_Plugin {
 	function add_metabox() {
 
 		if ( $this->get_post_templates() )
-			add_meta_box( 'pt_post_templates', __( 'Single Post Template', 'genesis' ), array( $this, 'metabox' ), 'post', 'normal', 'high' );
+			add_meta_box( 'pt_post_templates', __( 'Single Post Template', 'single-post-template' ), array( $this, 'metabox' ), 'post', 'normal', 'high' );
 
 	}
 
@@ -93,12 +94,12 @@ class Single_Post_Template_Plugin {
 		?>
 		<input type="hidden" name="pt_noncename" id="pt_noncename" value="<?php echo wp_create_nonce( plugin_basename( __FILE__ ) ); ?>" />
 
-		<label class="hidden" for="post_template"><?php  _e( 'Post Template', 'genesis' ); ?></label><br />
+		<label class="hidden" for="post_template"><?php  _e( 'Post Template', 'single-post-template' ); ?></label><br />
 		<select name="_wp_post_template" id="post_template" class="dropdown">
-			<option value=""><?php _e( 'Default', 'genesis' ); ?></option>
+			<option value=""><?php _e( 'Default', 'single-post-template' ); ?></option>
 			<?php $this->post_templates_dropdown(); ?>
 		</select><br /><br />
-		<p><?php _e( 'Some themes have custom templates you can use for single posts that might have additional features or custom layouts. If so, you will see them above.', 'genesis' ); ?></p>
+		<p><?php _e( 'Some themes have custom templates you can use for single posts that might have additional features or custom layouts. If so, you will see them above.', 'single-post-template' ); ?></p>
 		<?php
 
 	}
