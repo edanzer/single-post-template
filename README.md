@@ -89,3 +89,15 @@ Bug reports are, of course, appreciated and cost you nothing. I will try to make
 * Better conflict detection
 * Better namespacing via a wrapping class
 * WordPress compatibility
+
+###  1.4.1
+* Fix admin bug
+
+### 1.4.2
+* Fix misc bugs
+
+### 1.4.3
+* Fix misc bugs
+
+### 1.4.4
+* Fix issue with default template not loading
